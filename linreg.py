@@ -24,7 +24,7 @@ X_test = sc.fit_transform(X_test)
 Y_test = sc.fit_transform(Y_test)
 
 model = Sequential()
-model.add(Dense(1, activation='linear', input_shape=(1,)))
+model.add(Dense(1, activation='linear', input_dim=1))
 model.compile(optimizer='sgd', loss='mse')
 model.fit(X_train, Y_train, batch_size=1, verbose=1, epochs=10, shuffle=False)
 plt.scatter(X_train, Y_train, color='black')
